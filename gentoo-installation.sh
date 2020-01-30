@@ -133,6 +133,4 @@ chroot /mnt/gentoo /bin/bash
 source /etc/profile
 export PS1="(chroot) ${PS1}"
 
-cat > /mnt/gentoo/root/gentoo-init.sh << END
-
-emerge htop
+#cat > /mnt/gentoo/root/gentoo-init.sh << END
