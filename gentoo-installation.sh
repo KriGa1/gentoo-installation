@@ -129,9 +129,9 @@ mount --make-rslave /mnt/gentoo/dev
 
 echo "### Changing root..."
 
-root #chroot /mnt/gentoo /bin/bash
-root #source /etc/profile
-root #export PS1="(chroot) ${PS1}"
+chroot /mnt/gentoo /bin/bash
+source /etc/profile
+export PS1="(chroot) ${PS1}"
 
 cat > /mnt/gentoo/root/gentoo-init.sh << END
 
