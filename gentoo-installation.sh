@@ -134,6 +134,7 @@ root #source /etc/profile
 root #export PS1="(chroot) ${PS1}"
 
 cat > /mnt/gentoo/root/gentoo-init.sh << END
+
 #!/bin/bash
 
 set -e
