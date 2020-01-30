@@ -9,7 +9,7 @@ GENTOO_VARIANT=amd64
 
 TARGET_DISK=/dev/sda
 
-PARTITION_BOOT_SIZE=100M
+PARTITION_BOOT_SIZE=128M
 PARTITION_SWAP_SIZE=1G
 
 USE_LIVECD_KERNEL=1
@@ -209,6 +209,6 @@ rm /mnt/gentoo/root/gentoo-init.sh
 echo "### Rebooting..."
 
 # signal that installation is completed before rebooting
-for i in `seq 1 10`; do tput bel; done
+#for i in `seq 1 10`; do tput bel; done
 
-reboot
+#reboot
