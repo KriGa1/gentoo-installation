@@ -202,9 +202,9 @@ rc-update add net.eth0 default
 
 echo "### Cleaning..."
 
-#rm /mnt/gentoo/$(basename $STAGE3_URL)
-#rm /mnt/gentoo/$(basename $PORTAGE_URL)
-#rm /mnt/gentoo/root/gentoo-init.sh
+rm /mnt/gentoo/$(basename $STAGE3_URL)
+rm /mnt/gentoo/$(basename $PORTAGE_URL)
+rm /mnt/gentoo/root/gentoo-init.sh
 
 echo "### Rebooting..."
 
