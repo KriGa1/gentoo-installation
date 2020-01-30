@@ -25,16 +25,6 @@ eselect profile set 20
 emerge --ask --verbose --update --deep --newuse @world
 env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
-echo "### Configuring fstab..."
-
-cat >> /mnt/gentoo/etc/fstab << END
-
-# added by gentoo installer
-LABEL=boot /boot ext4 noauto,noatime 1 2
-LABEL=swap none  swap sw             0 0
-LABEL=root /     ext4 noatime        0 1
-END
-
 echo "### Upading configuration..."
 
 env-update && source /etc/profile
