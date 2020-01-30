@@ -23,7 +23,6 @@ eselect news read
 eselect profile list
 eselect profile set 20
 emerge --ask --verbose --update --deep --newuse @world
-env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
 echo "### Upading configuration..."
 
@@ -39,7 +38,7 @@ if [ "$USE_LIVECD_KERNEL" = 0 ]; then
     emerge sys-kernel/genkernel
     genkernel all --kernel-config=/etc/kernels/kernel-config-*
 fi
-
+emerge --ask sys-kernel/linux-firmware
 echo "### Installing bootloader..."
 
 emerge grub
