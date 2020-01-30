@@ -19,10 +19,9 @@ GRUB_PLATFORMS=pc
 echo "### Configuring emerge..."
 
 emerge-webrsync
-eselect news list
 eselect news read
 eselect profile list
-eselect profile set 2
+eselect profile set 20
 emerge --ask --verbose --update --deep --newuse @world
 env-update && source /etc/profile && export PS1="(chroot) ${PS1}"
 
