@@ -61,9 +61,11 @@ grub-install ${TARGET_DISK}
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "### Configuring network..."
-
-ln -s /etc/init.d/net.lo /etc/init.d/net.eth0
-rc-update add net.eth0 default
+emerge --ask app-admin/sysklogd
+rc-update add sysklogd default
+emerge --ask net-misc/dhcpcd
+#ln -s /etc/init.d/net.lo /etc/init.d/net.eth0
+#rc-update add net.eth0 default
 
 #echo "### Configuring SSH..."
 
@@ -83,6 +85,7 @@ rm /mnt/gentoo/$(basename $STAGE3_URL)
 rm /mnt/gentoo/$(basename $PORTAGE_URL)
 rm /mnt/gentoo/root/gentoo-init.sh
 echo "### Rebooting..."
+passwd
 # signal that installation is completed before rebooting
 #for i in `seq 1 10`; do tput bel; done
 #reboot
