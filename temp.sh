@@ -70,7 +70,7 @@ tar xvpf $(basename $STAGE3_URL)
 
 echo "### Downloading portage..."
 
-PORTAGE_URL=$GENTOO_RELEASES_URL/snapshots/current/portage-latest.tar.xz
+PORTAGE_URL=https://github.com/gentoo/portage/archive/refs/tags/portage-3.0.28.tar.gz
 wget $PORTAGE_URL
 
 echo "### Extracting portage..."
